@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # Me
-	
+
 def uppercase(str):
     """Print a string in uppercase."""
     for c in str:
