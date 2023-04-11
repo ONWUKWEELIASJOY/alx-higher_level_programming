@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 class LockedClass:
-  """ locked class """
+locked class
   def __setattr__(self, name, value):
     if not hasattr(self, name):
        object.__setattr__(self, name, value)
