@@ -1,4 +1,5 @@
 #!/usr/bin/python3
-magic_string = lambda List_of_str=[]: ",
-".join(List_of_str + ["BestSchool"])
+def magic_string(List_of_str=[]):
+  List_of_str += ["BestSchool"]
+  return (", ".join(List_of_str))
 print(magic_string())
