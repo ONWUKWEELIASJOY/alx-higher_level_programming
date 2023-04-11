@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 def magic_string(List_of_str=None):
  if List_of_str is None:
     List_of_str = []
@@ -8,3 +9,4 @@ def magic_string(List_of_str=None):
 """
 AN OOP TASK ON ALX
 """
+
