@@ -3,5 +3,4 @@
 """type exeception"""
 
 def raise_exception():
-    raise ValueError
-
+    raise TypeError
