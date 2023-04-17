@@ -3,4 +3,6 @@
 """type exeception"""
 
 def raise_exception():
-    raise TypeError
+    x = "Elias, Joy"
+    y = 42
+    z = x + y
