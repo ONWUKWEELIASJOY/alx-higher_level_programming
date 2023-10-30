@@ -1,0 +1,47 @@
+def add_integer(a, b=98):
+    """
+    Adds two integers and returns the sum.
+    """
+    # Check if a and b are integers or floats
+    if not isinstance(a, (int, float)):
+        raise TypeError("a must be an integer")
+    if not isinstance(b, (int, float)):
+        raise TypeError("b must be an integer")
+  
+    # Cast a and b to integers if they are floats
+    if isinstance(a, float):
+        a = int(a)
+    if isinstance(b, float):
+        b = int(b)
+  
+    # Perform addition and return the result
+    return a + b
+
+
+def test_add_integer():
+    """
+    Tests for the add_integer function.
+    """
+    # Test cases
+    assert add_integer(1, 2) == 3, "Error: 1 + 2 != 3"
+    assert add_integer(100, -2) == 98, "Error: 100 - 2 != 98"
+    assert add_integer(2.1, 98) == 100, "Error: 2.1 + 98 != 100"
+    assert add_integer(100.3, 2) == 102, "Error: 100.3 + 2 != 102"
+
+    # Test cases for invalid inputs
+    try:
+        add_integer(2, "3")
+    except TypeError as e:
+        assert str(e) == "b must be an integer"
+
+    try:
+        add_integer("2", 3)
+    except TypeError as e:
+        assert str(e) == "a must be an integer"
+
+    print("All tests passed!")
+
+
+# Run the test cases
+test_add_integer()
+
