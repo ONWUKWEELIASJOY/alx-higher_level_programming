@@ -1,0 +1,58 @@
+import unittest
+from 100-matrix_mul import matrix_mul
+
+class MatrixMulTestCase(unittest.TestCase):
+    def test_valid_multiplication(self):
+        # Test case with valid multiplication
+        m_a = [[1, 2, 3],
+               [4, 5, 6]]
+        m_b = [[7, 8],
+               [9, 10],
+               [11, 12]]
+        expected_output = [[58, 64],
+                           [139, 154]]
+        result = matrix_mul(m_a, m_b)
+        self.assertEqual(result, expected_output)
+
+    def test_invalid_multiplication(self):
+        # Test case with invalid multiplication
+        m_a = [[1, 2, 3],
+               [4, 5, 6]]
+        m_b = [[7, 8, 9],
+               [10, 11, 12]]
+        try:
+            matrix_mul(m_a, m_b)
+        except ValueError as e:
+            self.assertEqual(str(e), "m_a and m_b can't be multiplied")
+        else:
+            self.fail("Expected ValueError")
+
+    def test_invalid_input_types(self):
+        # Test case with invalid input types
+        m_a = 123  # Invalid input type (not a list)
+        m_b = [[1, 2],
+               [3, 4]]
+        try:
+            matrix_mul(m_a, m_b)
+        except TypeError as e:
+            self.assertEqual(str(e), "m_a must be a list or m_b must be a list")
+        else:
+            self.fail("Expected TypeError")
+
+    def test_empty_matrices(self):
+        # Test case with empty matrices
+        m_a = [[]]  # Empty matrix
+        m_b = [[1, 2],
+               [3, 4]]
+        try:
+            matrix_mul(m_a, m_b)
+        except ValueError as e:
+            self.assertEqual(str(e), "m_a can't be empty or m_b can't be empty")
+        else:
+            self.fail("Expected ValueError")
+
+    # Add more test cases to cover all requirements and edge cases
+
+if __name__ == "__main__":
+    unittest.main()
+
