@@ -1,0 +1,32 @@
+def test_text_indentation():
+    """
+    Tests the text_indentation function.
+    """
+    # Test case 1: Simple sentence
+    text1 = "This is a simple sentence."
+    expected_output1 = "This is a simple sentence.\n\n"
+    assert text_indentation(text1) == expected_output1
+
+    # Test case 2: Multiple sentences with different punctuations
+    text2 = "This is a sentence? This is another sentence. Yet another one: sentence!"
+    expected_output2 = "This is a sentence?\n\nThis is another sentence.\n\nYet another one: sentence!\n\n"
+    assert text_indentation(text2) == expected_output2
+
+    # Test case 3: Empty string
+    text3 = ""
+    expected_output3 = "\n\n"
+    assert text_indentation(text3) == expected_output3
+
+    # Test case 4: String with no '.', '?', or ':'
+    text4 = "This is a test"
+    expected_output4 = "This is a test\n\n"
+    assert text_indentation(text4) == expected_output4
+
+    # Additional test case: Passing a non-string argument
+    try:
+        text_indentation(123)  # Pass an integer instead of a string
+    except TypeError as e:
+        assert str(e) == "text must be a string"
+    else:
+        raise AssertionError("Expected TypeError")
+

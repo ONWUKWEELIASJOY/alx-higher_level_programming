@@ -1,0 +1,46 @@
+def test_print_square():
+    """
+    Tests for the print_square function.
+    """
+    try:
+        print_square(5)
+    except Exception as e:
+        print("Error:", str(e))
+        assert False
+    
+    try:
+        print_square(3)
+    except Exception as e:
+        print("Error:", str(e))
+        assert False
+    
+    try:
+        print_square(0)
+    except Exception as e:
+        print("Error:", str(e))
+        assert False
+    
+    try:
+        print_square(-5)
+    except Exception as e:
+        print("Error:", str(e))
+        assert False
+    
+    try:
+        print_square(3.5)
+    except Exception as e:
+        print("Error:", str(e))
+        assert False
+    
+    try:
+        print_square("4")
+    except Exception as e:
+        print("Error:", str(e))
+        assert False
+    
+    print("All tests passed!")
+
+
+# Run the test cases
+test_print_square()
+
