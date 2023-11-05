@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#magic class Elias joy chinonso
+# magic class Elias joy chinonso
 
 """writing a docstring"""
 import math
