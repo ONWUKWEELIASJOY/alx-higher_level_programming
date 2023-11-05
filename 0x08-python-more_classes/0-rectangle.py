@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # by Elias joy chinonso
 
-"""This class defines a rectangle"""
+"""class defines a rectangle"""
 
 
 class Rectangle:
