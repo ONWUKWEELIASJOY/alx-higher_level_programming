@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#102-square.py by Elias joy chinonso
+# 102-square.py by Elias joy chinonso
 
 """My square module"""
 
