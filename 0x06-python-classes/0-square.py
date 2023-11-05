@@ -3,6 +3,7 @@
 
 """Defines a square """
 
+
 class Square:
     """performs nothing"""
     pass
