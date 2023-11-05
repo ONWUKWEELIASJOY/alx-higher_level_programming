@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+# by Elias joy chinonso
+
+"""class that defines a rectangle"""
+
+
 class Rectangle:
     def __init__(self, width=0, height=0):
         self._width = 0
