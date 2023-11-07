@@ -1,6 +1,5 @@
 ##!/usr/bin/python3
 # Elias Joy Chinonso
-
 """This is a module that defines a JSON file-reading function"""
 import json
 
