@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # Elias Joy Chinonso
+
 """This is a module that adds all arguments to a Python list and save them to a file."""
 
 
